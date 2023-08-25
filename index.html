@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 style="font-size:60px; color: lightseagreen ; text-align:center;">Game of Life</h1>
+    <style>
+      body {
+        background-image: url('Background.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed; 
+        background-size: 100% 100%;
+      }
+      </style>
+    <div class="Frame">
+    <div id="canvas"></div></div>
+    <div>Frame Rate: <span class = "fps">15</span> fps</div>
+    <input type="range" id="slider" min="1" max="60" value="15"/>
+
+    <!-- <div class = "playButton">PLAY</div> -->
+    
+    <!-- <input type"range" ></input> -->
+    <div class="row">
+      <div class="col-11">
+        
+        <!--<button class="next" role="button" id="next">Next</button>
+        <button class="resume" role="button" id="resume">Resume</button> -->
+        <button type="button" id="stop" class="btn btn-primary stop" role="button" onclick="stop()">Stop</button>
+        <button type="button" class="btn btn-secondary next" role="button" onclick="next()">Next</button>
+        <button type="button" class="btn btn-success resume" role="button" onclick="resume()">Resume</button>
+        <button id="randompattern" type="button" class="btn btn-danger" role="button" onclick="randompattern()">Random Pattern</button>
+        
+        <div>
+        <button type="button" class="btn btn-warning">Die of Loneliness</button>
+          <label for="loneliness"></label>
+          <select id="loneliness">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option></select>
+        </div>
+          <button type="button" class="btn btn-warning">Die of Overpopulation</button>
+          <label for="loneliness"></label>
+          <select id="loneliness">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option></select>
+      </div>
+    </div><button type="button" class="btn btn-warning">New life due to Reproductions</button>
+          <label for="loneliness"></label>
+          <select id="loneliness">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option></select>
+        </div>
+        <!-- <button type="button" class="btn btn-light"onclick="loneliness(+1)">+1</button>
+        <button type="button" class="btn btn-dark"onclick="loneliness(-1)">-1</button> -->
+        <!-- <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button class="btn btn-primary">My Button</button> -->
+        
+    </div>
+
+    <div>Import RLE file or Input text here</div><input type='file' id="rle" accept='text/plain'/>
+    <div id='output'></div>
+    <script src="./rle.js"></script>
+    <script src="./index.js"></script>
+
+    <input type="text" placeholder="Exter text here">
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"
+    ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+    <!-- <script src="pattern.js"></script> -->
+    <script src="index.js"></script>
+  </body>
+</html>
